@@ -21,6 +21,9 @@
     "gov",
     "gov.uk",
     "gov.nz",
-    "services.aremi.data61.io"
+    "services.aremi.data61.io",
+    // "docs.stlogic.co.kr",  // GWS
+    "map.pstatic.net", // 네이버지도
+    "localhost:9998" // 터레인서버
   ]
 }

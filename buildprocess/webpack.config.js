@@ -26,6 +26,14 @@ module.exports = function (devMode, hot) {
           include: path.resolve(__dirname, "..", "lib", "Views"),
           loader: "raw-loader"
         },
+        // webpack 4 issue: web worker support workaround
+        // https://github.com/gildas-lormeau/zip.js/discussions/258#discussioncomment-925643
+        {
+          test: /zip\.js$/,
+          // test: /.\/node_modules\/\.pnpm\/file+packages+cesium\/node_modules\/terriajs-cesium\/Source\/ThirdParty\/zip\.js$/,
+          // include: [path.join(__dirname, './node_modules/.pnpm/file+packages+cesium/node_modules/terriajs-cesium/Source/ThirdParty')],
+          loader: require.resolve("@open-wc/webpack-import-meta-loader")
+        },
         {
           test: /\.(ts|js)x?$/,
           include: [

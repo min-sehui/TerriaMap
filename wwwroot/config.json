@@ -2,6 +2,8 @@
   /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
   "initializationUrls": ["simple"],
   "parameters": {
+    "bingMapsKey": "ArrEmGccdZGY48AnZqqOEDr_x67N1YXkdG6zaoNIOSGC_AWYTDrl-6z8BtZHLMri",
+    "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMGE3MmM4MC1iNGM4LTQ3OTctOGQ3Ni1hNDUxMGZmNzFkNWYiLCJpZCI6MzIzNSwic2NvcGVzIjpbImFzciJdLCJpYXQiOjE1NzY3NDczNTh9.YV8lCoPQJdXWYx8MB9S7iRgodp2f5m77Jv_x4ItKGQ4",
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
     "googleAnalyticsOptions": null,
@@ -69,9 +71,10 @@
     // "showInAppGuides": false,
     // see `languageOverrides.json` in languages/en
     "languageConfiguration": {
-      "enabled": false,
+      "enabled": true,
       "debug": false,
       "languages": {
+        "ko": "한국어",
         "en": "English",
         "fr": "Français"
       },
@@ -235,7 +238,7 @@
         "term": "translate#helpContentTerm8.term",
         "content": "translate#helpContentTerm8.content"
       }
-    ]
+    ],
     // Or direct strings
     // "helpContent": [
     //   {
@@ -368,5 +371,16 @@
     //       content: "The way the dataset appears in the preview window. We recommend true colour to search for cloud-free images"
     //   }
     // ]
+
+    // True to use Cesium World Terrain from Cesium ion.
+    // "useCesiumIonTerrain": false, // true,
+    // "cesiumTerrainUrl": "http://localhost:9998/tilesets/ALOS_Korea_DSM",
+
+    "hideTerriaLogo": true,
+    "storyEnabled": true,
+    "helpEnabled": false,
+
+    // 데이터셋의 창-분할 비교 켜기
+    "disableSplitter": true
   }
 }

@@ -1,11 +1,69 @@
 {
   "homeCamera": {
-    "north": -8,
-    "east": 158,
-    "south": -45,
-    "west": 109
+    "north": 37.715133,
+    "east": 127.269311,
+    "south": 37.413294,
+    "west": 126.734086
+    // "north": -8,
+    // "east": 158,
+    // "south": -45,
+    // "west": 109
   },
   "catalog": [
+    {
+      "id": "DL4Av6wY5h1",
+      "type": "geojson",
+      "name": "시도 중심",
+      "url": "https://docs.stlogic.co.kr/gws-js/orange/wfs?gdx=SVC_STLOGIC.xml&service=WFS&version=1.1.0&outputFormat=geojson&request=GetFeature&typeName=ac_adm_sid.center_geo&srsName=EPSG%3A4326"
+    },
+    {
+      "id": "DL4Av6wY5h2",
+      "type": "geojson",
+      "name": "읍면동",
+      "url": "https://docs.stlogic.co.kr/gws-js/orange/wfs?gdx=SVC_STLOGIC.xml&service=WFS&version=1.1.0&request=GetFeature&typeName=ac_adm_emd.shape_geo&outputFormat=geojson&srsName=EPSG%3A4326"
+    },
+    {
+      "id": "ZIdekvc10z1",
+      "name": "GWS",
+      "type": "group",
+      "description": "GWS",
+      "members": [
+        {
+          "name": "WMS",
+          "type": "wms-group",
+          "url": "https://docs.stlogic.co.kr/gws-js/orange/wms?gdx=SVC_STLOGIC.xml&service=WMS",
+          "getCapabilitiesUrl": "https://docs.stlogic.co.kr/gws-js/orange/wms?gdx=SVC_STLOGIC.xml&service=WMS&request=GetCapabilities"
+          // "forceProxy": true
+        },
+        {
+          "name": "WFS",
+          "type": "wfs-group",
+          "url": "https://docs.stlogic.co.kr/gws-js/orange/wfs?gdx=SVC_STLOGIC.xml&service=WFS&version=1.1.0",
+          "getCapabilitiesUrl": "https://docs.stlogic.co.kr/gws-js/orange/wfs?gdx=SVC_STLOGIC.xml&service=WFS&version=1.1.0&request=GetCapabilities"
+          // "forceProxy": true
+        }
+      ]
+    },
+    {
+      "id": "ZIdekvc10z2",
+      "name": "GeoServer",
+      "type": "group",
+      "description": "GeoServer",
+      "members": [
+        {
+          "name": "WMS",
+          "type": "wms-group",
+          "url": "https://geoserver-123.aodn.org.au"
+          // "forceProxy": true
+        }
+        // {
+        //   "name": "WFS",
+        //   "type": "wfs-group",
+        //   "url": "https://geoserver-123.aodn.org.au"
+        //   // "forceProxy": true
+        // }
+      ]
+    },
     {
       "id": "ZIdekvc10z",
       "type": "wms-group",
